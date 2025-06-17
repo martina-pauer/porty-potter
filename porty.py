@@ -48,8 +48,8 @@ class Syntax():
         '''
         output = re.sub(self.show_text, language.show_text, text)
 
-        #output = re.sub(self.variables, language.variables, text)
+        output = re.sub(self.variables, language.variables, output)
 
-        #output = re.sub(self.conditionals, language.conditionals, text)
+        output = re.sub(self.conditionals, language.conditionals, output)
 
         return output.replace('.{1})', '')
