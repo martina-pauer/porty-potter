@@ -1,16 +1,5 @@
-from porty import Syntax
+import lang
 
-# Define som commons syntax
-python, C, Go, Java = Syntax(), Syntax(), Syntax(), Syntax()
-
-python.show_text = 'print(.{1})'
-
-C.show_text = 'printf(.{1})'
-
-Go.show_text = 'fmt.Println(.{1})'
-
-Java.show_text = 'System.out.println(.{1})'
-
-print('\n\tfrom Java to C: ', Java.transform('System.out.println("Test IT");', C))
-print('\n\tfrom C to Java: ', C.transform('printf("Hello World");', Java))
-print('\n\tfrom C to Go: ', C.transform('printf("modern");', Go))
+print('\n\tfrom Java to C: ', lang.Java.transform('System.out.println("Test IT");', C))
+print('\n\tfrom C to Java: ', lang.C.transform('printf("Hello World");', Java))
+print('\n\tfrom C to Go: ', lang.C.transform('printf("modern");', Go))
